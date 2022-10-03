@@ -1,0 +1,42 @@
+{
+  "console.log": {
+    "prefix": "console",
+    "body": ["console.log(${0})"],
+    "description": "console.log"
+  },
+  "import-scripts-helper": {
+    "prefix": "import-scripts-helper",
+    "body": ["import { api, toast } from \"@/scripts\";"],
+    "description": "Import base script helper (api, toast)"
+  },
+  "useQuasar": {
+    "prefix": "useQuasar",
+    "body": [
+      "import { useQuasar } from \"quasar\";",
+      "const $q = useQuasar();"
+    ],
+    "description": "import and use useQuasar() function"
+  },
+  "import-vue": {
+    "prefix": "import-vue",
+    "body": ["{ ref${0} } from 'vue';"],
+    "description": "import ref from vue"
+  },
+  "import-inertia": {
+    "prefix": "import-inertia",
+    "body": ["import { Inertia } from '@inertiajs/inertia'"],
+    "description": "import inertia function"
+  },
+
+  "dialog-quasar": {
+    "prefix": "",
+    "body": [
+      "$q.dialog({",
+      "\tcomponent: ${0},",
+      "}).onOk(() => {",
+      "\tdatatable.value.refresh();",
+      "});"
+    ],
+    "description": ""
+  }
+}
