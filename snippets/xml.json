@@ -1,0 +1,12 @@
+{
+  "odoo field": {
+    "prefix": "field",
+    "body": ["<field name=\"${1}\" />", ""],
+    "description": "odoo field"
+  },
+  "Attr Invisible": {
+    "prefix": "attr-invisible",
+    "body": ["attrs=\"{'invisible': [('${1}', '=', False)\\]}\""],
+    "description": "Attr Invisible"
+  }
+}

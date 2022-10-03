@@ -1,0 +1,53 @@
+{
+  "Qinput Quasar": {
+    "prefix": "qinput",
+    "body": [
+      "q-input(:label=\"__(${1})\" v-model=\"\"  hint=\"\" :rules=\"[\\$rules.required()]\" v-uppercase stack-label)"
+    ],
+    "description": "Qinput Quasar"
+  },
+  "Template Pug Page": {
+    "prefix": "template-pug-page",
+    "body": [
+      "<template lang=\"pug\">",
+      "Layout",
+      "</template>",
+      "<script setup>",
+      "import Layout from \"../layouts/panel.vue\";",
+      "import { ref } from \"vue\";",
+      "",
+      "</script>"
+    ],
+    "description": "Template Pug Page"
+  },
+  "Template Dialog Quasar": {
+    "prefix": "template-dialog-quasar",
+    "body": [
+      "<template lang=\"pug\">",
+      "q-dialog(ref='dialogRef' @hide='onDialogHide')",
+      "	q-card.q-dialog-plugin",
+      "		q-card-section",
+      "			div.text-h5 ${1}",
+      "",
+      "		q-card-actions(align='right')",
+      "			q-btn(color='primary' label='OK' @click='onOKClick')",
+      "			q-btn(color='primary' label='Cancel' @click='onDialogCancel')",
+      "</template>",
+      "",
+      "<script setup>",
+      "import { useDialogPluginComponent } from \"quasar\";",
+      "",
+      "const props = defineProps({});",
+      "",
+      "defineEmits([...useDialogPluginComponent.emits]);",
+      "",
+      "const { dialogRef, onDialogHide, onDialogOK, onDialogCancel } =",
+      "useDialogPluginComponent();",
+      "function onOKClick() {",
+      "onDialogOK();",
+      "}",
+      "</script>"
+    ],
+    "description": "Template Dialog Quasar"
+  }
+}
