@@ -19,7 +19,7 @@
   },
   "import-vue": {
     "prefix": "import-vue",
-    "body": ["{ ref${0} } from 'vue';"],
+    "body": ["import { ref${0} } from 'vue';"],
     "description": "import ref from vue"
   },
   "import-inertia": {
@@ -28,8 +28,8 @@
     "description": "import inertia function"
   },
 
-  "dialog-quasar": {
-    "prefix": "",
+  "Show Dialog Quasar": {
+    "prefix": "dialog-quasar",
     "body": [
       "$q.dialog({",
       "\tcomponent: ${0},",
@@ -37,6 +37,6 @@
       "\tdatatable.value.refresh();",
       "});"
     ],
-    "description": ""
+    "description": "Show Dialog Quasar"
   }
 }
