@@ -49,5 +49,14 @@
       "</script>"
     ],
     "description": "Template Dialog Quasar"
+  },
+  "Quasar Card actions with buttons": {
+    "prefix": "quasar-card-actions-with-buttons",
+    "body": [
+      "q-card-actions(align='right')",
+      "  q-btn(color='positive' icon=\"mdi-content-save\" :label=\"__('Simpan data')\" @click='submit' :loading=\"loading\")",
+      "  q-btn(label='Cancel' @click='')"
+    ],
+    "description": "Quasar Card actions with buttons"
   }
 }
