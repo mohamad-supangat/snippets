@@ -26,6 +26,22 @@
       {
         "language": "xml",
         "path": "./snippets/xml.json"
+      },
+      {
+        "language": "blade",
+        "path": "./snippets/laravel/snippets.json"
+      },
+      {
+        "language": "blade",
+        "path": "./snippets/laravel/helpers.json"
+      },
+      {
+        "language": "blade",
+        "path": "./snippets/laravel/livewire.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/blade.json"
       }
     ]
   }
