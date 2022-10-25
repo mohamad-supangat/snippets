@@ -42,6 +42,110 @@
       {
         "language": "php",
         "path": "./snippets/laravel/blade.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/auth.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/cache.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/config.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/console.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/cookie.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/crypt.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/db.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/eloquent.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/event.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/hash.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/helper.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/log.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/mail.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/redirect.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/relation.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/request.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/response.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/route.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/schema.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/session.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/storage.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/view.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/passport.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/str.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/laravel/broadcast.json"
+      },
+      {
+        "language": "blade",
+        "path": "./snippets/laravel/collective_form_html.json"
       }
     ]
   }
