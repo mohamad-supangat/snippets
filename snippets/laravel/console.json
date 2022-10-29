@@ -27,13 +27,6 @@
         ],
         "description": "Log a comment to the console"
     },
-    "Command-confirm.sublime-snippet": {
-        "prefix": "",
-        "body": [
-            "\\$this->confirm('${1:Do you wish to continue? [Y|N]}');$2"
-        ],
-        "description": "Logs a confirmation prompt to the console"
-    },
     "Command-error.sublime-snippet": {
         "prefix": "Console::error",
         "body": [
