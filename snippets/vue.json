@@ -63,5 +63,10 @@
     "prefix": "import-inertia-vue2",
     "body": ["import { Head } from \"@inertiajs/inertia-vue3\";"],
     "description": "Import {Head} Inertia vue3 binding"
+  },
+  "Vue print with translation function": {
+    "prefix": "{{",
+    "body": ["{{ __('$1') }}"],
+    "description": "Vue print with translation function"
   }
 }
