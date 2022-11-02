@@ -42,5 +42,24 @@
     "prefix": "moment-default-format",
     "body": ["moment().format('YYYY/MM/DD')"],
     "description": "moment.js current date default format"
+  },
+  "Fungi submit": {
+    "prefix": "function-submit",
+    "body": [
+      "async function submit() {",
+      "  loading.value.submit = true;",
+      "  try {",
+      "    const response = await api.post(route(\"$1\"), $2);",
+      "    toast.request(response.status, response.message);",
+      "    if (response.status) {",
+      "      $3;",
+      "    }",
+      "  } finally {",
+      "    loading.value.submit = false;",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Fungi submit"
   }
 }
