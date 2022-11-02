@@ -71,7 +71,7 @@
   },
   "Required rules": {
     "prefix": "rules-required",
-    "body": [":rules='[$rules.required()]'"],
+    "body": [":rules='[\\$rules.required()]'"],
     "description": "Required rules"
   },
   "Quasar Date Picker": {
@@ -79,7 +79,7 @@
     "body": [
       "q-input(v-model=\"${1}\", mask=\"date\", :rules=\"['date']\")",
       "    template(v-slot:append)",
-      "        q-icon.cursor-pointer(name=\"mdi-calendar-outlined\")",
+      "        q-icon.cursor-pointer(name=\"mdi-calendar\")",
       "            q-popup-proxy(cover, transition-show=\"scale\", transition-hide=\"scale\")",
       "                q-date(v-model=\"${2}\")",
       "                    .row.items-center.justify-end",

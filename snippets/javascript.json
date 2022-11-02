@@ -30,7 +30,7 @@
   "Show Dialog Quasar": {
     "prefix": "dialog-quasar",
     "body": [
-      "$q.dialog({",
+      "\\$q.dialog({",
       "\tcomponent: ${0},",
       "}).onOk(() => {",
       "\tdatatable.value.refresh();",
