@@ -20,6 +20,10 @@
         "path": "./snippets/vue.json"
       },
       {
+        "language": "pug",
+        "path": "./snippets/pug.json"
+      },
+      {
         "language": "php",
         "path": "./snippets/php.json"
       },
