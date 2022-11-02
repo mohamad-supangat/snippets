@@ -90,7 +90,7 @@
   },
   "label` with translate": {
     "prefix": "label-with-translate",
-    "body": [":label=\"__('$1')\""],
+    "body": [":label=\"__('$1')\" "],
     "description": "label` with translate"
   }
 }

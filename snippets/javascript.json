@@ -27,7 +27,6 @@
     "body": ["import { Inertia } from '@inertiajs/inertia'"],
     "description": "import inertia function"
   },
-
   "Show Dialog Quasar": {
     "prefix": "dialog-quasar",
     "body": [
@@ -38,5 +37,10 @@
       "});"
     ],
     "description": "Show Dialog Quasar"
+  },
+  "moment.js current date default format": {
+    "prefix": "moment-default-format",
+    "body": ["moment().format('YYYY/MM/DD')"],
+    "description": "moment.js current date default format"
   }
 }
