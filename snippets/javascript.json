@@ -10,6 +10,13 @@
     "description": "Import base script helper (api, toast)"
   },
   "useQuasar": {
+    "prefix": "import-quasar",
+    "body": [
+      "import { Dialog } from \"quasar\";",
+    ],
+    "description": "import Dialog from quasar"
+  },
+  "useQuasar": {
     "prefix": "useQuasar",
     "body": [
       "import { useQuasar } from \"quasar\";",
@@ -24,13 +31,13 @@
   },
   "import-inertia": {
     "prefix": "import-inertia",
-    "body": ["import { Inertia } from '@inertiajs/inertia'"],
+    "body": ["import { router } from '@inertiajs/vue3'"],
     "description": "import inertia function"
   },
   "Show Dialog Quasar": {
     "prefix": "dialog-quasar",
     "body": [
-      "\\$q.dialog({",
+      "\\Dialog.create({",
       "\tcomponent: ${0},",
       "}).onOk(() => {",
       "\tdatatable.value.refresh();",

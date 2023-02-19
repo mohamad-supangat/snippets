@@ -51,7 +51,7 @@
     "description": "Template Dialog Quasar"
   },
   "Quasar Card actions with buttons": {
-    "prefix": "quasar-card-actions-with-buttons",
+    "prefix": "q-card-actions-with-buttons",
     "body": [
       "q-card-actions(align='right')",
       "  q-btn(color='positive' icon=\"mdi-content-save\" :label=\"__('Simpan data')\" @click='submit' :loading=\"loading\")",
@@ -60,9 +60,9 @@
     "description": "Quasar Card actions with buttons"
   },
   "Import Inertiajs vue3": {
-    "prefix": "import-inertia-vue2",
-    "body": ["import { Head } from \"@inertiajs/inertia-vue3\";"],
-    "description": "Import {Head} Inertia vue3 binding"
+    "prefix": "import-inertia",
+    "body": ["import { router} from \"@inertiajs/vue3\";"],
+    "description": "Import {Head} Inertia vue3"
   },
   "Vue print with translation function": {
     "prefix": "echo {{",
