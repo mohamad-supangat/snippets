@@ -11,9 +11,7 @@
   },
   "useQuasar": {
     "prefix": "import-quasar",
-    "body": [
-      "import { Dialog } from \"quasar\";",
-    ],
+    "body": ["import { Dialog } from \"quasar\";"],
     "description": "import Dialog from quasar"
   },
   "useQuasar": {
