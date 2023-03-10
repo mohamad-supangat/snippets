@@ -1,70 +1,82 @@
 {
-  "console.log": {
-    "prefix": "console",
-    "body": ["console.log(${0})"],
-    "description": "console.log"
-  },
-  "import-scripts-helper": {
-    "prefix": "import-scripts-helper",
-    "body": ["import { api, toast } from \"@/scripts\";"],
-    "description": "Import base script helper (api, toast)"
-  },
-  "useQuasar": {
-    "prefix": "import-quasar",
-    "body": ["import { Dialog } from \"quasar\";"],
-    "description": "import Dialog from quasar"
-  },
-  "useQuasar": {
-    "prefix": "useQuasar",
-    "body": [
-      "import { useQuasar } from \"quasar\";",
-      "const $q = useQuasar();"
-    ],
-    "description": "import and use useQuasar() function"
-  },
-  "import-vue": {
-    "prefix": "import-vue",
-    "body": ["import { ref${0} } from 'vue';"],
-    "description": "import ref from vue"
-  },
-  "import-inertia": {
-    "prefix": "import-inertia",
-    "body": ["import { router } from '@inertiajs/vue3'"],
-    "description": "import inertia function"
-  },
-  "Show Dialog Quasar": {
-    "prefix": "dialog-quasar",
-    "body": [
-      "\\Dialog.create({",
-      "\tcomponent: ${0},",
-      "}).onOk(() => {",
-      "\tdatatable.value.refresh();",
-      "});"
-    ],
-    "description": "Show Dialog Quasar"
-  },
-  "moment.js current date default format": {
-    "prefix": "moment-default-format",
-    "body": ["moment().format('YYYY/MM/DD')"],
-    "description": "moment.js current date default format"
-  },
-  "Fungi submit": {
-    "prefix": "function-submit",
-    "body": [
-      "async function submit() {",
-      "  loading.value.submit = true;",
-      "  try {",
-      "    const response = await api.post(route(\"$1\"), $2);",
-      "    toast.request(response.status, response.message);",
-      "    if (response.status) {",
-      "      $3;",
-      "    }",
-      "  } finally {",
-      "    loading.value.submit = false;",
-      "  }",
-      "}",
-      ""
-    ],
-    "description": "Fungi submit"
-  }
+    "console.log": {
+        "prefix": "console",
+        "body": [
+            "console.log(${0})"
+        ],
+        "description": "console.log"
+    },
+    "import-scripts-helper": {
+        "prefix": "import-scripts-helper",
+        "body": [
+            "import { api, toast } from \"@/scripts\";"
+        ],
+        "description": "Import base script helper (api, toast)"
+    },
+    "importQuasar": {
+        "prefix": "import-quasar",
+        "body": [
+            "import { Dialog } from \"quasar\";"
+        ],
+        "description": "import Dialog from quasar"
+    },
+    "useQuasar": {
+        "prefix": "useQuasar",
+        "body": [
+            "import { useQuasar } from \"quasar\";",
+            "const $q = useQuasar();"
+        ],
+        "description": "import and use useQuasar() function"
+    },
+    "import-vue": {
+        "prefix": "import-vue",
+        "body": [
+            "import { ref${0} } from 'vue';"
+        ],
+        "description": "import ref from vue"
+    },
+    "import-inertia": {
+        "prefix": "import-inertia",
+        "body": [
+            "import { router } from '@inertiajs/vue3'"
+        ],
+        "description": "import inertia function"
+    },
+    "Show Dialog Quasar": {
+        "prefix": "dialog-quasar",
+        "body": [
+            "\\Dialog.create({",
+            "\tcomponent: ${0},",
+            "}).onOk(() => {",
+            "\tdatatable.value.refresh();",
+            "});"
+        ],
+        "description": "Show Dialog Quasar"
+    },
+    "moment.js current date default format": {
+        "prefix": "moment-default-format",
+        "body": [
+            "moment().format('YYYY/MM/DD')"
+        ],
+        "description": "moment.js current date default format"
+    },
+    "Fungi submit": {
+        "prefix": "function-submit",
+        "body": [
+            "async function submit() {",
+            "  loading.value.submit = true;",
+            "  try {",
+            "    const response = await api.post(route(\"$1\"), $2);",
+            "    toast.request(response.status, response.message);",
+            "    if (response.status) {",
+            "      $3;",
+            "    }",
+            "  } finally {",
+            "    loading.value.submit = false;",
+            "  }",
+            "}",
+            ""
+        ],
+        "description": "Fungi submit"
+    }
 }
