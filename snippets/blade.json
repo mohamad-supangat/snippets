@@ -1,6 +1,6 @@
 {
   "Route::post action name": {
-    "prefix": "{{ translate",
+    "prefix": "echo translate",
     "body": ["{{ translate('${1}') }}"],
     "description": "translate function echo"
   }
