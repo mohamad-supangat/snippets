@@ -37,6 +37,10 @@
       },
       {
         "language": "blade",
+        "path": "./snippets/blade.json"
+      },
+      {
+        "language": "blade",
         "path": "./snippets/laravel/helpers.json"
       },
       {
