@@ -16,5 +16,9 @@
   "wire:model": {
     "prefix": "wire:model",
     "body": ["wire:model=\"${1}\""]
+  },
+  "label with lang": {
+    "prefix": "label",
+    "body": [":label=\"__('$1')\""]
   }
 }
