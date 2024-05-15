@@ -8,5 +8,13 @@
     "prefix": "echo translate",
     "body": ["{{ translate('${1}') }}"],
     "description": "translate function echo"
+  },
+  "required": {
+    "prefix": "req",
+    "body": ["required ${1}"]
+  },
+  "wire:model": {
+    "prefix": "wire:model",
+    "body": ["wire:model=\"${1}\""]
   }
 }
