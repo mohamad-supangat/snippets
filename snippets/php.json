@@ -1,1 +1,37 @@
-{"Json Response":{"body":["response()->json(${1});"],"prefix":"json-response","description":"Json Response"},"datatable::sphelper with query builder":{"prefix":"datatable::sphelper with query builder","body":["\\$model = QueryBuilder::for(${1:class}::class)->allowedFilters([]);","","return SpHelper::generateTable(","    \\$model,","    [","        'id',","        'name',","    ]",");"]},"data_get:laravel":{"prefix":"data_get:laravel","body":"data_get(${1}, '${2}')"},"Route::post action name":{"body":["Route::post('action', [${1}, 'action'\\])->name('action');",""],"prefix":"route-post-action","description":"Route::post action name"},"created and updated by::laravel migration":{"body":["\\$table->nullableUuidMorphs('created_by');","\\$table->nullableUuidMorphs('updated_by');"],"prefix":"created and updated by::laravel migration"}}
+{
+  "Json Response": {
+    "body": ["response()->json(${1});"],
+    "prefix": "json-response",
+    "description": "Json Response"
+  },
+  "datatable::sphelper with query builder": {
+    "prefix": "datatable::sphelper with query builder",
+    "body": [
+      "\\$model = QueryBuilder::for(${1:class}::class)->allowedFilters([]);",
+      "",
+      "return SpHelper::generateTable(",
+      "    \\$model,",
+      "    [",
+      "        'id',",
+      "        'name',",
+      "    ]",
+      ");"
+    ]
+  },
+  "data_get:laravel": {
+    "prefix": "data_get:laravel",
+    "body": "data_get(${1}, '${2}')"
+  },
+  "Route::post action name": {
+    "body": ["Route::post('action', [${1}, 'action'\\])->name('action');", ""],
+    "prefix": "route-post-action",
+    "description": "Route::post action name"
+  },
+  "created and updated by::laravel migration": {
+    "body": [
+      "\\$table->nullableUuidMorphs('created_by');",
+      "\\$table->nullableUuidMorphs('updated_by');"
+    ],
+    "prefix": "created and updated by::laravel migration"
+  }
+}
