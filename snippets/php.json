@@ -1,11 +1,31 @@
 {
   "Json Response": {
-    "body": ["response()->json(${1});"],
-    "prefix": "json-response",
-    "description": "Json Response"
+    "body": [
+      "response()->json(${1});"
+    ],
+    "description": "Json Response",
+    "prefix": "json-response"
+  },
+  "Route::post action name": {
+    "body": [
+      "Route::post('action', [${1}, 'action'\\])->name('action');",
+      ""
+    ],
+    "description": "Route::post action name",
+    "prefix": "route-post-action"
+  },
+  "created and updated by::laravel migration": {
+    "body": [
+      "\\$table->nullableUuidMorphs('created_by');",
+      "\\$table->nullableUuidMorphs('updated_by');"
+    ],
+    "prefix": "created and updated by::laravel migration"
+  },
+  "data_get:laravel": {
+    "body": "data_get(${1}, '${2}')",
+    "prefix": "data_get:laravel"
   },
   "datatable::sphelper with query builder": {
-    "prefix": "datatable::sphelper with query builder",
     "body": [
       "\\$model = QueryBuilder::for(${1:class}::class)->allowedFilters([]);",
       "",
@@ -16,22 +36,29 @@
       "        'name',",
       "    ]",
       ");"
-    ]
-  },
-  "data_get:laravel": {
-    "prefix": "data_get:laravel",
-    "body": "data_get(${1}, '${2}')"
-  },
-  "Route::post action name": {
-    "body": ["Route::post('action', [${1}, 'action'\\])->name('action');", ""],
-    "prefix": "route-post-action",
-    "description": "Route::post action name"
-  },
-  "created and updated by::laravel migration": {
-    "body": [
-      "\\$table->nullableUuidMorphs('created_by');",
-      "\\$table->nullableUuidMorphs('updated_by');"
     ],
-    "prefix": "created and updated by::laravel migration"
+    "prefix": "datatable::sphelper with query builder"
+  },
+  "echo::translate": {
+    "body": "__('${1}'${2})",
+    "prefix": "echo::translate"
+  },
+  "translatedFormat": {
+    "body": "translatedFormat('j F Y')",
+    "prefix": "translatedFormat"
+  },
+  "trycatch:with-database-transaction": {
+    "body": [
+      "DB::beginTransaction();",
+      "try {",
+      "    ${1}",
+      "    DB::commit();",
+      "} catch (\\Throwable \\$th) {",
+      "    DB::rollBack();",
+      "    //throw \\$th;",
+      "    Alert::makeThrowable(\\$th);",
+      "}"
+    ],
+    "prefix": "trycatch:with-database-transaction"
   }
 }
