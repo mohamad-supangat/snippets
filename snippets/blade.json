@@ -10,13 +10,6 @@
     "description": "__ function echo",
     "prefix": "echo __"
   },
-  "echo translate function": {
-    "body": [
-      "{{ translate('${1}') }}"
-    ],
-    "description": "translate function echo",
-    "prefix": "echo translate"
-  },
   "label with lang": {
     "body": [
       ":label=\"__('$1')\""
