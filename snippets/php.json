@@ -1,11 +1,27 @@
 {
   "Json Response": {
-    "body": ["response()->json(${1});"],
-    "prefix": "json-response",
-    "description": "Json Response"
+    "body": [
+      "response()->json(${1});"
+    ],
+    "description": "Json Response",
+    "prefix": "json-response"
+  },
+  "Route::post": {
+    "body": "Route::post('action', [${1}, 'action'])->name('action');",
+    "prefix": "Route::post"
+  },
+  "created and updated by::laravel migration": {
+    "body": [
+      "\\$table->nullableUuidMorphs('created_by');",
+      "\\$table->nullableUuidMorphs('updated_by');"
+    ],
+    "prefix": "created and updated by::laravel migration"
+  },
+  "data_get:laravel": {
+    "body": "data_get(${1}, '${2}')",
+    "prefix": "data_get:laravel"
   },
   "datatable::sphelper with query builder": {
-    "prefix": "datatable::sphelper with query builder",
     "body": [
       "\\$model = QueryBuilder::for(${1:class}::class)->allowedFilters([]);",
       "",
@@ -16,22 +32,31 @@
       "        'name',",
       "    ]",
       ");"
-    ]
-  },
-  "data_get:laravel": {
-    "prefix": "data_get:laravel",
-    "body": "data_get(${1}, '${2}')"
-  },
-  "Route::post action name": {
-    "body": ["Route::post('action', [${1}, 'action'\\])->name('action');", ""],
-    "prefix": "route-post-action",
-    "description": "Route::post action name"
-  },
-  "created and updated by::laravel migration": {
-    "body": [
-      "\\$table->nullableUuidMorphs('created_by');",
-      "\\$table->nullableUuidMorphs('updated_by');"
     ],
-    "prefix": "created and updated by::laravel migration"
+    "prefix": "datatable::sphelper with query builder"
+  },
+  "jam": {
+    "body": [
+      "<tr>",
+      "          <td align=\"center\">${1}</td>",
+      "          <td align=\"center\">${2}</td>",
+      "          <td></td>",
+      "          <td></td>",
+      "          <td></td>",
+      "          <td></td>",
+      "        </tr>"
+    ],
+    "prefix": "jam"
+  },
+  "lvmodel:Attribute": {
+    "body": [
+      "protected function ${1}(): Attribute",
+      "{",
+      "    return Attribute::make(",
+      "        get: fn() => ${2};",
+      "    )",
+      "}"
+    ],
+    "prefix": "lvmodel:Attribute"
   }
 }

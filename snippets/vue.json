@@ -1,7 +1,17 @@
 {
-  "datatable::pug": {
-    "prefix": "datatable::pug",
-    "body": "Datatable(:url=\"\\$route('${1}')\" :columns=\"columns\" ref=\"datatable\" :filter=\"${2:filter}\" include=\"${3}\" :customTd=\"[${4}]\" append=\"${5}\")"
+  "Import Inertiajs vue3": {
+    "body": [
+      "import { router} from \"@inertiajs/vue3\";"
+    ],
+    "description": "Import {Head} Inertia vue3",
+    "prefix": "import-inertia"
+  },
+  "Qinput Quasar": {
+    "body": [
+      "q-input(:label=\"__(${1})\" v-model=\"\"  hint=\"\" :rules=\"[\\$rules.required()]\" v-uppercase stack-label)"
+    ],
+    "description": "Qinput Quasar",
+    "prefix": "qinput"
   },
   "Quasar Date Picker": {
     "body": [
@@ -14,29 +24,15 @@
       "                        q-btn(v-close-popup, label=\"Close\", color=\"primary\", flat)",
       ""
     ],
-    "prefix": "date-picker",
-    "description": "Quasar Date Picker"
-  },
-  "actions::datatable custom q-card-actions": {
-    "prefix": "actions::datatable custom q-card-actions",
-    "body": [
-      "template(v-slot:action=\"{ props }\")",
-      "    q-btn(round, dense, flat, icon=\"mdi-pencil\", color=\"secondary\" size=\"sm\" @click=\"updateData(props.row)\")",
-      "        q-tooltip {{ __('Ubah Data') }}",
-      "",
-      "    q-btn(@click=\"deleteData(props.row)\", round, dense, color=\"negative\", flat, icon=\"mdi-trash-can-outline\" size=\"sm\" )",
-      "        q-tooltip {{ __('Hapus Data') }}"
-    ]
+    "description": "Quasar Date Picker",
+    "prefix": "date-picker"
   },
   "Required rules": {
-    "body": [":rules='[\\$rules.required()]'"],
-    "prefix": "rules-required",
-    "description": "Required rules"
-  },
-  "Vue print with translation function": {
-    "body": ["{{ __('$1') }}"],
-    "prefix": "echo {{",
-    "description": "Vue print with translation function"
+    "body": [
+      ":rules='[\\$rules.required()]'"
+    ],
+    "description": "Required rules",
+    "prefix": "rules-required"
   },
   "Template Pug Page": {
     "body": [
@@ -49,40 +45,55 @@
       "",
       "</script>"
     ],
-    "prefix": "template-pug-page",
-    "description": "Template Pug Page"
+    "description": "Template Pug Page",
+    "prefix": "template-pug-page"
   },
-  "Qinput Quasar": {
+  "Vue print with translation function": {
     "body": [
-      "q-input(:label=\"__(${1})\" v-model=\"\"  hint=\"\" :rules=\"[\\$rules.required()]\" v-uppercase stack-label)"
+      "{{ __('$1') }}"
     ],
-    "prefix": "qinput",
-    "description": "Qinput Quasar"
+    "description": "Vue print with translation function",
+    "prefix": "echo {{"
   },
-  "Import Inertiajs vue3": {
-    "body": ["import { router} from \"@inertiajs/vue3\";"],
-    "prefix": "import-inertia",
-    "description": "Import {Head} Inertia vue3"
-  },
-  "label` with translate": {
-    "body": [":label=\"__('$1')\" "],
-    "prefix": "label-with-translate",
-    "description": "label` with translate"
+  "actions::datatable custom q-card-actions": {
+    "body": [
+      "template(v-slot:action=\"{ props }\")",
+      "    q-btn(round, dense, flat, icon=\"mdi-pencil\", color=\"secondary\" size=\"sm\" @click=\"updateData(props.row)\")",
+      "        q-tooltip {{ __('Ubah Data') }}",
+      "",
+      "    q-btn(@click=\"deleteData(props.row)\", round, dense, color=\"negative\", flat, icon=\"mdi-trash-can-outline\" size=\"sm\" )",
+      "        q-tooltip {{ __('Hapus Data') }}"
+    ],
+    "prefix": "actions::datatable custom q-card-actions"
   },
   "custom-datatable-status::pug": {
-    "prefix": "custom-datatable-status::pug",
-    "body": "template(v-slot:custom-${1}=\"{ props }\")"
+    "body": "template(v-slot:custom-${1}=\"{ props }\")",
+    "prefix": "custom-datatable-status::pug"
+  },
+  "datatable::pug": {
+    "body": "Datatable(:url=\"\\$route('${1}')\" :columns=\"columns\" ref=\"datatable\" :filter=\"${2:filter}\" include=\"${3}\" :customTd=\"[${4}]\" append=\"${5}\")",
+    "prefix": "datatable::pug"
+  },
+  "import:component in another modules": {
+    "body": "import ${1} from '@${2}/views/components/${3}.vue';",
+    "prefix": "import:component in another modules"
+  },
+  "label` with translate": {
+    "body": [
+      ":label=\"__('$1')\" "
+    ],
+    "description": "label` with translate",
+    "prefix": "label-with-translate"
   },
   "q-card-actions-with-buttons": {
-    "prefix": "q-card-actions-with-buttons",
     "body": [
       "q-card-actions(align='right')",
       "  q-btn(color='positive' icon=\"mdi-content-save\" :label=\"__('Simpan data')\" @click='submit' :loading=\"loading.submit\")",
       "  q-btn(label='Cancel' @click='${1}' flat)"
-    ]
+    ],
+    "prefix": "q-card-actions-with-buttons"
   },
   "template-dialog-quasar": {
-    "prefix": "template-dialog-quasar",
     "body": [
       "<template lang=\"pug\">",
       "q-form(@submit=\"submit\")",
@@ -126,7 +137,7 @@
       "    }",
       "}",
       "</script>"
-    ]
+    ],
+    "prefix": "template-dialog-quasar"
   }
 }
-

@@ -1,9 +1,4 @@
 {
-  "name": "snippsets",
-  "version": "1.0.0",
-  "engines": {
-    "vscode": "^1.11.0"
-  },
   "contributes": {
     "snippets": [
       {
@@ -34,7 +29,18 @@
       {
         "language": "blade",
         "path": "./snippets/blade.json"
+      },
+      {
+        "language": [
+          "markdown"
+        ],
+        "path": "./markdown.json"
       }
     ]
-  }
+  },
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "name": "snippsets",
+  "version": "1.0.0"
 }

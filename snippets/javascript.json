@@ -1,32 +1,4 @@
 {
-  "importQuasar": {
-    "body": ["import { Dialog } from \"quasar\";"],
-    "description": "import Dialog from quasar",
-    "prefix": "import-quasar"
-  },
-  "column::datatable": {
-    "prefix": "column::datatable",
-    "body": [
-      "{",
-      "    name: \"${1}\",",
-      "    label: \"${1}\",",
-      "    field: \"${1}\",",
-      "    align: \"left\",",
-      "    sortable: true,",
-      "},"
-    ]
-  },
-  "console.log": {
-    "body": ["console.log(${0})"],
-    "description": "console.log",
-    "prefix": "console"
-  },
-  "form::ref": { "prefix": "form::ref", "body": "const form = ref({})" },
-  "moment.js current date default format": {
-    "body": ["moment().format('YYYY/MM/DD')"],
-    "description": "moment.js current date default format",
-    "prefix": "moment-default-format"
-  },
   "Fungi submit": {
     "body": [
       "async function submit() {",
@@ -46,28 +18,19 @@
     "description": "Fungi submit",
     "prefix": "function-submit"
   },
-  "dialog-quasar": {
-    "prefix": "dialog-quasar",
+  "column::datatable": {
     "body": [
-      "Dialog.create({",
-      "\tcomponent: ${0},",
-      "}).onOk(() => {",
-      "\tdatatable.value.refresh();${1}",
-      "});"
-    ]
-  },
-  "import-inertia": {
-    "body": ["import { router } from '@inertiajs/vue3'"],
-    "description": "import inertia function",
-    "prefix": "import-inertia"
-  },
-  "import-vue": {
-    "body": ["import { ref${0} } from 'vue';"],
-    "description": "import ref from vue",
-    "prefix": "import-vue"
+      "{",
+      "    name: \"${1}\",",
+      "    label: \"${1}\",",
+      "    field: \"${1}\",",
+      "    align: \"left\",",
+      "    sortable: true,",
+      "},"
+    ],
+    "prefix": "column::datatable"
   },
   "columns::datatable": {
-    "prefix": "columns::datatable",
     "body": [
       "const columns = [",
       "    {",
@@ -100,11 +63,98 @@
       "        sortable: false,",
       "    },",
       "];"
-    ]
+    ],
+    "prefix": "columns::datatable"
+  },
+  "console.log": {
+    "body": [
+      "console.log(${0})"
+    ],
+    "description": "console.log",
+    "prefix": "console"
+  },
+  "dialog-quasar": {
+    "body": [
+      "Dialog.create({",
+      "\tcomponent: ${0},",
+      "}).onOk(() => {",
+      "\tdatatable.value.refresh();${1}",
+      "});"
+    ],
+    "prefix": "dialog-quasar"
+  },
+  "form::ref": {
+    "body": "const form = ref({})",
+    "prefix": "form::ref"
+  },
+  "import-inertia": {
+    "body": [
+      "import { router } from '@inertiajs/vue3'"
+    ],
+    "description": "import inertia function",
+    "prefix": "import-inertia"
+  },
+  "import-scripts-helper": {
+    "body": [
+      "import { api, toast } from \"@/scripts\";"
+    ],
+    "description": "Import base script helper (api, toast)",
+    "prefix": "import-scripts-helper"
+  },
+  "import-vue": {
+    "body": [
+      "import { ref${0} } from 'vue';"
+    ],
+    "description": "import ref from vue",
+    "prefix": "import-vue"
+  },
+  "importQuasar": {
+    "body": [
+      "import { Dialog } from \"quasar\";"
+    ],
+    "description": "import Dialog from quasar",
+    "prefix": "import-quasar"
   },
   "loading:ref": {
-    "prefix": "loading:ref",
-    "body": "const loading = ref({ submit: false });"
+    "body": "const loading = ref({ submit: false });",
+    "prefix": "loading:ref"
+  },
+  "moment.js current date default format": {
+    "body": [
+      "moment().format('YYYY/MM/DD')"
+    ],
+    "description": "moment.js current date default format",
+    "prefix": "moment-default-format"
+  },
+  "oapi:description": {
+    "body": [
+      "oapi.path({",
+      "    description: 'Proses Login dan dapatkan sesi akun ',",
+      "}),"
+    ],
+    "prefix": "oapi:description"
+  },
+  "oapi:openapi doc generator": {
+    "body": [
+      "oapi.path({",
+      "  responses: {",
+      "    200: {",
+      "      description: 'Successful response',",
+      "      content: {",
+      "        'application/json': {",
+      "          schema: {",
+      "            type: 'object',",
+      "            properties: {",
+      "              ${1}: { type: 'string' }",
+      "            }",
+      "          }",
+      "        }",
+      "      }",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "prefix": "oapi:openapi doc generator"
   },
   "useQuasar": {
     "body": [
@@ -113,11 +163,5 @@
     ],
     "description": "import and use useQuasar() function",
     "prefix": "useQuasar"
-  },
-  "import-scripts-helper": {
-    "body": ["import { api, toast } from \"@/scripts\";"],
-    "description": "Import base script helper (api, toast)",
-    "prefix": "import-scripts-helper"
   }
 }
-
