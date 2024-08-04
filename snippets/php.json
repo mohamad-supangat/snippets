@@ -6,9 +6,13 @@
     "description": "Json Response",
     "prefix": "json-response"
   },
-  "Route::post": {
-    "body": "Route::post('action', [${1}, 'action'])->name('action');",
-    "prefix": "Route::post"
+  "Route::post action name": {
+    "body": [
+      "Route::post('action', [${1}, 'action'\\])->name('action');",
+      ""
+    ],
+    "description": "Route::post action name",
+    "prefix": "route-post-action"
   },
   "created and updated by::laravel migration": {
     "body": [
@@ -35,18 +39,27 @@
     ],
     "prefix": "datatable::sphelper with query builder"
   },
-  "jam": {
+  "echo::translate": {
+    "body": "__('${1}'${2})",
+    "prefix": "echo::translate"
+  },
+  "translatedFormat": {
+    "body": "translatedFormat('j F Y')",
+    "prefix": "translatedFormat"
+  },
+  "trycatch:with-database-transaction": {
     "body": [
-      "<tr>",
-      "          <td align=\"center\">${1}</td>",
-      "          <td align=\"center\">${2}</td>",
-      "          <td></td>",
-      "          <td></td>",
-      "          <td></td>",
-      "          <td></td>",
-      "        </tr>"
+      "DB::beginTransaction();",
+      "try {",
+      "    ${1}",
+      "    DB::commit();",
+      "} catch (\\Throwable \\$th) {",
+      "    DB::rollBack();",
+      "    //throw \\$th;",
+      "    Alert::makeThrowable(\\$th);",
+      "}"
     ],
-    "prefix": "jam"
+    "prefix": "trycatch:with-database-transaction"
   },
   "lvmodel:Attribute": {
     "body": [

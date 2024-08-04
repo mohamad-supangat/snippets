@@ -1,24 +1,40 @@
 {
+  "alert-response::component": {
+    "body": "<x-alert-response />",
+    "prefix": "alert-response::component"
+  },
   "echo __ function": {
-    "prefix": "echo __",
-    "body": ["{{ __('${1}') }}"],
-    "description": "__ function echo"
-  },
-  "echo translate function": {
-    "prefix": "echo translate",
-    "body": ["{{ translate('${1}') }}"],
-    "description": "translate function echo"
-  },
-  "required": {
-    "prefix": "req",
-    "body": ["required ${1}"]
-  },
-  "wire:model": {
-    "prefix": "wire:model",
-    "body": ["wire:model=\"${1}\""]
+    "body": [
+      "{{ __('${1}') }}"
+    ],
+    "description": "__ function echo",
+    "prefix": "echo __"
   },
   "label with lang": {
-    "prefix": "label",
-    "body": [":label=\"__('$1')\""]
+    "body": [
+      ":label=\"__('$1')\""
+    ],
+    "prefix": "label"
+  },
+  "required": {
+    "body": [
+      "required ${1}"
+    ],
+    "prefix": "req"
+  },
+  "wire:model": {
+    "body": [
+      "wire:model=\"${1}\""
+    ],
+    "prefix": "wire:model"
+  },
+  "x-card:with-title-and-subtoitle": {
+    "body": [
+      "<x-card>",
+      "    <div class=\"text-sm font-semibold\">{{ __('${1}') }}</div>",
+      "    <div class=\"text-xs font-normal text-gray-500 mt-1\">{{ __('${2}') }}</div>",
+      "</x-card>"
+    ],
+    "prefix": "x-card:with-title-and-subtoitle"
   }
 }
