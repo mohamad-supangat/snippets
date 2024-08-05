@@ -3,6 +3,10 @@
     "body": "<x-alert-response />",
     "prefix": "alert-response::component"
   },
+  "data_get:laravel": {
+    "body": "data_get($1, '${2}')",
+    "prefix": "data_get:laravel"
+  },
   "echo __ function": {
     "body": [
       "{{ __('${1}') }}"
@@ -27,6 +31,14 @@
       "wire:model=\"${1}\""
     ],
     "prefix": "wire:model"
+  },
+  "x-card:with-title": {
+    "body": [
+      "<x-card>",
+      "    <x-title :title=\"__('${1}')\" :subtitle=\"__(${2})\" />",
+      "</x-card>"
+    ],
+    "prefix": "x-card:with-title"
   },
   "x-card:with-title-and-subtoitle": {
     "body": [

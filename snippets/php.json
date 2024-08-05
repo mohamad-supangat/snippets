@@ -14,6 +14,15 @@
     "description": "Route::post action name",
     "prefix": "route-post-action"
   },
+  "column": {
+    "body": [
+      "=> [",
+      "                'value'  => 0,",
+      "                'column' => __('$1'),",
+      "            ]"
+    ],
+    "prefix": "column"
+  },
   "created and updated by::laravel migration": {
     "body": [
       "\\$table->nullableUuidMorphs('created_by');",
@@ -39,9 +48,31 @@
     ],
     "prefix": "datatable::sphelper with query builder"
   },
+  "double:table-column": {
+    "body": "\\$table->double('${1}' . 20, 2)->default(0);",
+    "prefix": "double:table-column"
+  },
   "echo::translate": {
     "body": "__('${1}'${2})",
     "prefix": "echo::translate"
+  },
+  "lv:table and guarded": {
+    "body": [
+      "/**",
+      " * The table associated with the model.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$table = '${1}';",
+      "",
+      "/**",
+      " * The attributes that aren't mass assignable.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$guarded = ['id'];"
+    ],
+    "prefix": "lv:table and guarded"
   },
   "translatedFormat": {
     "body": "translatedFormat('j F Y')",
