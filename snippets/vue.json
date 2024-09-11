@@ -70,6 +70,10 @@
     "body": "template(v-slot:custom-${1}=\"{ props }\")",
     "prefix": "custom-datatable-status::pug"
   },
+  "dashboard-card::component": {
+    "body": "import DashboardCard from '@/views/components/dashboard-card.vue';",
+    "prefix": "dashboard-card::component"
+  },
   "datatable::pug": {
     "body": "Datatable(:url=\"\\$route('${1}')\" :columns=\"columns\" ref=\"datatable\" :filter=\"${2:filter}\" include=\"${3}\" :customTd=\"[${4}]\" append=\"${5}\")",
     "prefix": "datatable::pug"
