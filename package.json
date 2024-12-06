@@ -6,7 +6,9 @@
           "javascript",
           "javascriptreact",
           "vue",
-          "svelte"
+          "svelte",
+          "typescript",
+          "javascriptreact"
         ],
         "path": "./snippets/javascript.json"
       },
