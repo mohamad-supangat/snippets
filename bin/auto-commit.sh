@@ -21,7 +21,7 @@ echo "-------------------------------------------------------------"
 # -m: mode pemantauan berkelanjutan
 # -r: memantau direktori secara rekursif (termasuk subdirektori)
 # -e: tentukan jenis kejadian yang akan dipantau
-inotifywait -m -r -e create,delete,modify,move "$DIRECTORY_TO_WATCH" |
+inotifywait -m -r -e create,delete,modify,move "$DIRECTORY_TO_WATCH" --exclude '\.git/' |
   while read -r directory event file; do
     echo "Waktu: $(date '+%Y-%m-%d %H:%M:%S') - Direktori: $directory - Kejadian: $event - Berkas: $file"
     git add .
