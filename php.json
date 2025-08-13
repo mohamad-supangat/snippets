@@ -1,0 +1,252 @@
+{
+  "Json Response": {
+    "body": [
+      "response()->json(${1});"
+    ],
+    "description": "Json Response",
+    "prefix": "json-response"
+  },
+  "Route::post action name": {
+    "body": [
+      "Route::post('action', [${1}, 'action'\\])->name('action');",
+      ""
+    ],
+    "description": "Route::post action name",
+    "prefix": "route-post-action"
+  },
+  "akun:si-pmn": {
+    "body": [
+      "[",
+      "    'akun'   => '${1:}',",
+      "    'number' => 10,",
+      "],"
+    ],
+    "prefix": "akun:si-pmn"
+  },
+  "column": {
+    "body": [
+      "=> [",
+      "                'value'  => 0,",
+      "                'column' => __('$1'),",
+      "            ]"
+    ],
+    "prefix": "column"
+  },
+  "created and updated by::laravel migration": {
+    "body": [
+      "\\$table->nullableUuidMorphs('created_by');",
+      "\\$table->nullableUuidMorphs('updated_by');"
+    ],
+    "prefix": "created and updated by::laravel migration"
+  },
+  "data_get:laravel": {
+    "body": "data_get(${1}, '${2}')",
+    "prefix": "data_get:laravel"
+  },
+  "datatable::sphelper with query builder": {
+    "body": [
+      "\\$model = QueryBuilder::for(${1:class}::class)->allowedFilters([]);",
+      "",
+      "return SpHelper::generateTable(",
+      "    \\$model,",
+      "    [",
+      "        'id',",
+      "        'name',",
+      "    ]",
+      ");"
+    ],
+    "prefix": "datatable::sphelper with query builder"
+  },
+  "double:table-column": {
+    "body": "\\$table->double('${1}' . 20, 2)->default(0);",
+    "prefix": "double:table-column"
+  },
+  "echo::translate": {
+    "body": "__('${1}'${2})",
+    "prefix": "echo::translate"
+  },
+  "lv:table and fillable": {
+    "body": [
+      "/**",
+      " * The table associated with the model.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$table = '${1}';"
+    ],
+    "prefix": "lv:table"
+  },
+  "lv:table and guarded": {
+    "body": [
+      "/**",
+      " * The table associated with the model.",
+      " *",
+      " * @var string",
+      " */",
+      "protected \\$table = '${1}';",
+      "",
+      "/**",
+      " * The attributes that aren't mass assignable.",
+      " *",
+      " * @var array",
+      " */",
+      "protected \\$guarded = ['id'];"
+    ],
+    "prefix": "lv:table and guarded"
+  },
+  "lvcontroller:delete": {
+    "body": [
+      "/**",
+      " * Delete function.",
+      " *",
+      " * @return object spresponse",
+      " */",
+      "public function delete(${2:} ${1:})",
+      "{",
+      "    try {",
+      "        ${1:}->delete();",
+      "",
+      "        return SpHelper::response(true, __('Menghapus :title', ['title' => \\$this->model_title]));",
+      "    } catch (\\Exception \\$e) {",
+      "        /* throw \\$e; */",
+      "        return SpHelper::response(false, __('Gagal mengahpus :title kemungkinan terdapat data yang berkaitan dengan item tersebut', ['title' => \\$this->model_title]));",
+      "    }",
+      "}"
+    ],
+    "prefix": "lvcontroller:delete"
+  },
+  "lvmodel:Attribute": {
+    "body": [
+      "protected function ${1}(): Attribute",
+      "{",
+      "    return Attribute::make(",
+      "        get: fn() => ${2};",
+      "    )",
+      "}"
+    ],
+    "prefix": "lvmodel:Attribute"
+  },
+  "lvroute:group": {
+    "body": [
+      "Route::group(",
+      "    [",
+      "        'prefix' => '${1:}',",
+      "        'as'     => '${1:}.',",
+      "    ],",
+      "    function () {",
+      "        Route::get('datatable', [${2:}::class, 'datatable'])->name('datatable');",
+      "        Route::get('show/{${1:}}', [${2:}::class, 'show'])->name('show');",
+      "        Route::post('action', [${2:}::class, 'action'])->name('action')->middleware();",
+      "        Route::delete('delete/{${1:}}', [${2:}::class, 'delete'])->name('delete')->middleware();",
+      "    }",
+      ");"
+    ],
+    "prefix": "lvroute:group"
+  },
+  "sekolahku:controller-action-function": {
+    "body": [
+      "public function action(Request \\$request)",
+      "{",
+      "    \\$request->validate([",
+      "        'name' => 'required',",
+      "    ]);",
+      "",
+      "    return SpHelper::response(true, __('Sukses Menyimpan Transaksi'));",
+      "}"
+    ],
+    "prefix": "sekolahku:controller-action-function"
+  },
+  "sekolahku:controller-delete-function": {
+    "body": [
+      "public function delete(Transaction \\$transaction)",
+      "{",
+      "    try {",
+      "        \\$transaction->delete();",
+      "",
+      "        return SpHelper::response(true, __('Menghapus :title', ['title' => \\$this->model_title]));",
+      "    } catch (\\Exception \\$e) {",
+      "        /* throw \\$e; */",
+      "        return SpHelper::response(false, __('Gagal mengahpus :title kemungkinan terdapat data yang berkaitan dengan item tersebut', ['title' => \\$this->model_title]));",
+      "    }",
+      "}"
+    ],
+    "prefix": "sekolahku:controller-delete-function"
+  },
+  "sekolahku:meta": {
+    "body": [
+      "['${1:}', [",
+      "    'title'    => __('${2:}'),",
+      "    'subtitle' => __('${3:}'),",
+      "]],"
+    ],
+    "prefix": "sekolahku:meta"
+  },
+  "sekolahku:route-group": {
+    "body": [
+      "Route::group(",
+      "    [",
+      "        'prefix'     => '${1:}',",
+      "        'as'         => '${1:}.',",
+      "        'middleware' => 'can:show ${1:}',",
+      "    ],",
+      "    function () {",
+      "        Route::get('datatable', [${2:}::class, 'datatable'])->name('datatable');",
+      "        Route::get('show/{${1:}}', [${2:}::class, 'show'])->name('show');",
+      "        Route::get('excel', [${2:}::class, 'excel'])->name('excel');",
+      "        Route::post('action', [${2:}::class, 'action'])->name('action')->middleware('can:edit ${1:}');",
+      "        Route::delete('delete/{${1:}}', [${2:}::class, 'delete'])->name('delete')->middleware('can:delete ${1:}');",
+      "    }",
+      ");"
+    ],
+    "prefix": "sekolahku:route-group"
+  },
+  "sekolahku:seed-permissions": {
+    "body": [
+      "\\$categories = [",
+      "    [",
+      "        'name'        => 'Buku Tabungan',",
+      "        'permissions' => [",
+      "            [",
+      "                'name'        => 'show savings book student',",
+      "                'description' => 'Melihat data buku tabungan siswa',",
+      "            ],",
+      "",
+      "            [",
+      "                'name'        => 'create savings book student',",
+      "                'description' => 'Menginput data buku tabungan siswa',",
+      "            ],",
+      "            [",
+      "                'name'        => 'edit savings book student',",
+      "                'description' => 'Mengedit data buku tabungan siswa',",
+      "            ],",
+      "            [",
+      "                'name'        => 'delete savings book student',",
+      "                'description' => 'Menghapus data buku tabungan siswa',",
+      "            ],",
+      "        ],",
+      "    ],",
+      "];",
+      "",
+      "seedPermissions('SavingsBook', \\$categories);"
+    ],
+    "prefix": "sekolahku:seed-permissions"
+  },
+  "translatedFormat": {
+    "body": "translatedFormat('j F Y')",
+    "prefix": "translatedFormat"
+  },
+  "trycatch:with-database-transaction": {
+    "body": [
+      "DB::beginTransaction();",
+      "try {",
+      "    ${1}",
+      "    DB::commit();",
+      "} catch (\\Throwable \\$th) {",
+      "    DB::rollBack();",
+      "    //throw \\$th;",
+      "    Alert::makeThrowable(\\$th);",
+      "}"
+    ],
+    "prefix": "trycatch:with-database-transaction"
+  }
+}

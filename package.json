@@ -10,27 +10,27 @@
           "typescript",
           "javascriptreact"
         ],
-        "path": "./snippets/javascript.json"
+        "path": "./javascript.json"
       },
       {
         "language": "vue",
-        "path": "./snippets/vue.json"
+        "path": "./vue.json"
       },
       {
         "language": "pug",
-        "path": "./snippets/pug.json"
+        "path": "./pug.json"
       },
       {
         "language": "php",
-        "path": "./snippets/php.json"
+        "path": "./php.json"
       },
       {
         "language": "xml",
-        "path": "./snippets/xml.json"
+        "path": "./xml.json"
       },
       {
         "language": "blade",
-        "path": "./snippets/blade.json"
+        "path": "./blade.json"
       },
       {
         "language": [
@@ -49,6 +49,12 @@
           "lua"
         ],
         "path": "./lua.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./json.json"
       }
     ]
   },

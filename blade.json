@@ -3,6 +3,20 @@
     "body": "<x-alert-response />",
     "prefix": "alert-response::component"
   },
+  "bank:card-footer": {
+    "body": [
+      "<div class=\"card-footer\">",
+      "                        <a href=\"{{ url('') }}\" class=\"btn btn-default\"><x-heroicon-o-chevron-left",
+      "                                class=\"icon\" /> Kembali</a>",
+      "",
+      "                        <button type=\"submit\" class=\"btn btn-primary float-right\">",
+      "                            <i class=\"fas fa-save\"></i>",
+      "                            Simpan",
+      "                        </button>",
+      "                    </div>"
+    ],
+    "prefix": "bank:card-footer"
+  },
   "data_get:laravel": {
     "body": "data_get($1, '${2}')",
     "prefix": "data_get:laravel"
