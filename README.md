@@ -1,3 +1,1 @@
- lorem lorem 
-
-lorem ipsum
+apakah berhasil 
