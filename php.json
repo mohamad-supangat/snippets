@@ -158,10 +158,10 @@
   },
   "sekolahku:controller-delete-function": {
     "body": [
-      "public function delete(Transaction \\$transaction)",
+      "public function delete(${1:} ${2:})",
       "{",
       "    try {",
-      "        \\$transaction->delete();",
+      "        ${2:}->delete();",
       "",
       "        return SpHelper::response(true, __('Menghapus :title', ['title' => \\$this->model_title]));",
       "    } catch (\\Exception \\$e) {",
@@ -193,7 +193,7 @@
       "        Route::get('datatable', [${2:}::class, 'datatable'])->name('datatable');",
       "        Route::get('show/{${1:}}', [${2:}::class, 'show'])->name('show');",
       "        Route::get('excel', [${2:}::class, 'excel'])->name('excel');",
-      "        Route::post('action', [${2:}::class, 'action'])->name('action')->middleware('can:edit ${1:}');",
+      "        Route::post('action', [${2:}::class, 'action'])->name('action')->middleware('permission:create ${1:}|edit ${1:}');",
       "        Route::delete('delete/{${1:}}', [${2:}::class, 'delete'])->name('delete')->middleware('can:delete ${1:}');",
       "    }",
       ");"
@@ -230,6 +230,27 @@
       "seedPermissions('SavingsBook', \\$categories);"
     ],
     "prefix": "sekolahku:seed-permissions"
+  },
+  "seolahku::controller-excel-function": {
+    "body": [
+      "public function excel(Request \\$request)",
+      "    {",
+      "        set_time_limit(0);",
+      "",
+      "        \\$config = [",
+      "            'title'        => __('${1:}'),",
+      "            'description'  => '',",
+      "            'show_example' => false,",
+      "        ];",
+      "",
+      "        \\$data = [",
+      "            'query'    => \\$this->queryBuilder(),",
+      "        ];",
+      "",
+      "        return Excel::download(new TransactionExport((object) \\$config, \\$data), __('${2:} .xlsx'));",
+      "    }"
+    ],
+    "prefix": "sekolahku:controller-excel-function"
   },
   "translatedFormat": {
     "body": "translatedFormat('j F Y')",

@@ -64,6 +64,10 @@
     ],
     "prefix": "actions::datatable custom q-card-actions"
   },
+  "const:filter": {
+    "body": "const filter = ref({});",
+    "prefix": "const:filter"
+  },
   "constform": {
     "body": "const form = ref({});",
     "prefix": "constform"
@@ -88,6 +92,35 @@
     ],
     "description": "Define Model",
     "prefix": "defineModel"
+  },
+  "function:delete": {
+    "body": [
+      "function deleteData(row) {",
+      "    Dialog.create({",
+      "        title: __('Lanjutkan'),",
+      "        message: __(`Apakah kamu yakin akan menghapus data ${1:} ?`),",
+      "        ok: {",
+      "            label: 'Lanjutkan',",
+      "            color: 'negative',",
+      "            icon: 'mdi-trash-can-outline',",
+      "        },",
+      "        cancel: 'Batal',",
+      "        persistent: true,",
+      "    }).onOk(() => {",
+      "        api.delete(",
+      "            route('${2:}', {",
+      "                ${3:}: row.id,",
+      "            }),",
+      "        ).then((d) => {",
+      "            toast.request(d.status, d.message);",
+      "            if (d.status) {",
+      "                datatable.value.refresh();",
+      "            }",
+      "        });",
+      "    });",
+      "}"
+    ],
+    "prefix": "function:delete"
   },
   "function:deleteData(row)": {
     "body": [
@@ -114,6 +147,22 @@
       "}"
     ],
     "prefix": "function:deleteData(row)"
+  },
+  "functon:edit": {
+    "body": [
+      "function editData(row) {",
+      "    Dialog.create({",
+      "        component: DialogForm,",
+      "        parent: this,",
+      "        componentProps: {",
+      "            ${1:}: copy(row),",
+      "        },",
+      "    }).onOk(() => {",
+      "        datatable.value.refresh();",
+      "    });",
+      "}"
+    ],
+    "prefix": "functon:edit"
   },
   "import:component in another modules": {
     "body": "import ${1} from '@${2}/views/components/${3}.vue';",
