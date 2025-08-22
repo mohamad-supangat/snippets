@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Tarik perubahan terbaru dari origin
+echo "Menarik perubahan terbaru dari origin..."
+git pull
+
 # Periksa apakah direktori disediakan sebagai argumen
 if [ -z "$1" ]; then
   echo "Penggunaan: $0 <path_ke_direktori>"
@@ -35,7 +39,7 @@ schedule_debounced_push() {
     # Setelah push selesai, kosongkan PUSH_PID di proses utama
     # (Ini sulit dilakukan dari sub-shell, jadi kita akan mengandalkan pembaruan PUSH_PID pada event baru)
   ) &
-  PUSH_PID=$! # Simpan PID dari proses latar belakang
+  PUSH_PID=$!
   echo "Push ke origin akan dijadwalkan dalam $DEBOUNCE_TIME detik."
 }
 
@@ -50,13 +54,15 @@ echo "-------------------------------------------------------------"
 # -e: tentukan jenis kejadian yang akan dipantau
 # --exclude '\.git/': mengabaikan folder .git
 inotifywait -m -r -e create,delete,modify,move "$DIRECTORY_TO_WATCH" --exclude '\.git/' |
-  while read -r directory event file; do
+  while read -r directory event file;
+  do
     echo "Waktu: $(date '+%Y-%m-%d %H:%M:%S') - Direktori: $directory - Kejadian: $event - Berkas: $file"
 
     git add .
 
     # Periksa apakah ada perubahan untuk di-commit
-    if ! git diff-index --quiet HEAD --; then
+    if ! git diff-index --quiet HEAD --;
+    then
       git commit -m "auto commit dari inotifywait"
       # Jika commit berhasil, jadwalkan push
       schedule_debounced_push

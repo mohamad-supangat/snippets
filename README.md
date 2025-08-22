@@ -1,1 +1,3 @@
 lorem
+
+merupakan sudtu kebaikan
