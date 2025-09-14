@@ -32,6 +32,10 @@
     "description": "Required rules",
     "prefix": "rules-required"
   },
+  "SelectTag": {
+    "body": "SelectTag(type=\"rekap_pembayaran_jenis_bayar\", :label=\"__('Jenis Bayar')\", v-model=\"form.jenis_bayar\")",
+    "prefix": "SelectTag"
+  },
   "Template Pug Page": {
     "body": [
       "<template lang=\"pug\">",
@@ -167,6 +171,10 @@
   "import:component in another modules": {
     "body": "import ${1} from '@${2}/views/components/${3}.vue';",
     "prefix": "import:component in another modules"
+  },
+  "import:select-tag": {
+    "body": "import SelectTag from '@/views/components/tags/select.vue';",
+    "prefix": "import:select-tag"
   },
   "label` with translate": {
     "body": [
