@@ -1,13 +1,58 @@
 {
   "slide:new": {
     "body": [
-      "::: title",
+      "---",
+      "",
+      "::: pretitle",
       "${1:}",
       ":::",
-      "${2:}",
       "",
-      "---"
+      "::: title",
+      "${2:}",
+      ":::",
+      "",
+      "${3:}"
     ],
     "prefix": "slide:new"
+  },
+  "slide:new-image": {
+    "body": [
+      "---",
+      "<!-- slide template=\"[[slide-content-image]]\" -->",
+      "",
+      "::: pretitle",
+      "${1:}",
+      ":::",
+      "",
+      "::: title",
+      "${2:}",
+      ":::",
+      "",
+      "",
+      "::: image",
+      "${3:}",
+      ":::",
+      "",
+      "",
+      "${4:}"
+    ],
+    "prefix": "slide:new-image"
+  },
+  "slide:new-title": {
+    "body": [
+      "---",
+      "<!-- slide template=\"[[slide-title]]\" -->",
+      "",
+      "## **${1:}**"
+    ],
+    "prefix": "slide:new-title"
+  },
+  "slide:split": {
+    "body": [
+      "<split gap=\"5\" even left=\"2\">",
+      "${1:}",
+      "</split>"
+    ],
+    "prefix": "slide:split"
   }
 }

@@ -62,5 +62,9 @@
       "</x-card>"
     ],
     "prefix": "x-card:with-title-and-subtoitle"
+  },
+  "x-title": {
+    "body": "<x-title :title=\"__('${1:}')\" :subtitle=\"__('${2:}')\"></x-title>",
+    "prefix": "x-title"
   }
 }
