@@ -156,6 +156,10 @@
     ],
     "prefix": "oapi:openapi doc generator"
   },
+  "toast.response": {
+    "body": "toast.response(response)",
+    "prefix": "toast.response"
+  },
   "useQuasar": {
     "body": [
       "import { useQuasar } from \"quasar\";",

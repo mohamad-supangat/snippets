@@ -14,5 +14,15 @@
       "]"
     ],
     "prefix": "sekolahku:apps"
+  },
+  "sekolahku:excel-column": {
+    "body": [
+      "{",
+      "    \"title\": \"${1:}\",",
+      "    \"key\": \"${2:}\",",
+      "    \"example\": \"${3:}\"",
+      "},"
+    ],
+    "prefix": "sekolahku:excel-column"
   }
 }
