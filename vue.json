@@ -26,9 +26,7 @@
     "prefix": "date-picker"
   },
   "Required rules": {
-    "body": [
-      ":rules='[\\$rules.required()]'"
-    ],
+    "body": " :rules='[\\$rules.required()]'",
     "description": "Required rules",
     "prefix": "rules-required"
   },
@@ -451,5 +449,15 @@
       "</script>"
     ],
     "prefix": "template-dialog-quasar"
+  },
+  "try-finally": {
+    "body": [
+      "loading.value = true",
+      "  try {",
+      "  } finally {",
+      "    loading.value = false",
+      "  }"
+    ],
+    "prefix": "try-finally"
   }
 }
